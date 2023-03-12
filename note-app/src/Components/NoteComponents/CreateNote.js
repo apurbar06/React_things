@@ -6,8 +6,8 @@ function CreateNote() {
       <textarea
         cols="10"
         rows="5"
-        placeholder="Type...."
-        maxLength="100"
+        placeholder="Type here...."
+        maxLength="120"
       ></textarea>
       <div className="note__footer">
         <span className="label"> left</span>
