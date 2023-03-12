@@ -4,8 +4,8 @@ import Note from "./Note";
 
 function Notes() {
   //states
-//   const [notes, setNotes] = useState([]);
-//   const [inputText, setInputText] = useState("");
+  const [notes, setNotes] = useState([]);
+  const [inputText, setInputText] = useState("");
 
   return (
     <div className="notes">

@@ -8,7 +8,7 @@ function Note() {
     <div className="note">
       
       <div className="note__body"></div>
-      <div className="note__footer">
+      <div className="note__footer" style={{ justifyContent: "flex-end" }}>
         {/* <DeleteForeverOutlinedIcon
           className="note__delete"
           aria-hidden="true"
