@@ -27,6 +27,12 @@ function Notes() {
     setInputText("");
   };
 
+  //delete note function
+  const deleteNote = (id) => {
+    const filteredNotes = notes.filter((note) => note.id !== id);
+    setNotes(filteredNotes);
+  };
+
   return (
     <div className="notes">
       <Note />
