@@ -11,8 +11,8 @@ function CreateNote({ textHandler, saveHandler, inputText }) {
         onChange={textHandler}
         maxLength="120"
       ></textarea>
-      <div className="note__footer">
-        <span className="label"> left</span>
+      <div className="note__footer" style={{ justifyContent: "flex-end" }}>
+        {/* <span className="label"> left</span> */}
         <button className="note__save" onClick={saveHandler}>
           Save
         </button>
