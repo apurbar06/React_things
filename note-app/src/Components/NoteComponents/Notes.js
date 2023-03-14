@@ -8,6 +8,7 @@ function Notes() {
   //states
   const [notes, setNotes] = useState([]);
   const [inputText, setInputText] = useState("");
+  const [isDeleted, setDelete] = useState(false);
 
   // get text and store in state
   const textHandler = (e) => {
@@ -30,15 +31,16 @@ function Notes() {
   //delete note function
   const deleteNote = (id) => {
     const filteredNotes = notes.filter((note) => note.id !== id);
+    setDelete(true);
     setNotes(filteredNotes);
   };
 
   //saving data to local storage
   useEffect(() => {
-    if(notes.length > 0) {
+    if(notes.length > 0  || isDeleted) {
       localStorage.setItem("Notes", JSON.stringify(notes));
     }
-  }, [notes]);
+  }, [notes, isDeleted]);
 
   //get the saved notes and add them to the array
   useEffect(() => {
