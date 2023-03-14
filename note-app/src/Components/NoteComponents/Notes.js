@@ -33,6 +33,21 @@ function Notes() {
     setNotes(filteredNotes);
   };
 
+  //saving data to local storage
+  useEffect(() => {
+    if(notes.length > 0) {
+      localStorage.setItem("Notes", JSON.stringify(notes));
+    }
+  }, [notes]);
+
+  //get the saved notes and add them to the array
+  useEffect(() => {
+    const data = JSON.parse(localStorage.getItem("Notes"));
+    if (data) {
+      setNotes(data);
+    }
+  }, []);
+
   return (
     <div className="notes">
       {notes.map((note) => (
