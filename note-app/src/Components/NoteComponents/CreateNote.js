@@ -1,6 +1,10 @@
 import { React } from "react";
 
 function CreateNote({ textHandler, saveHandler, inputText }) {
+  //character limit
+  const charLimit = 120;
+  const charLeft = charLimit - inputText.length;
+
   return (
     <div className="note" style={{ background: "rgba(255, 255, 255, 0)" }}>
       <textarea
@@ -11,8 +15,8 @@ function CreateNote({ textHandler, saveHandler, inputText }) {
         onChange={textHandler}
         maxLength="120"
       ></textarea>
-      <div className="note__footer" style={{ justifyContent: "flex-end" }}>
-        {/* <span className="label"> left</span> */}
+      <div className="note__footer">
+        <span className="label">{charLeft} left</span>
         <button className="note__save" onClick={saveHandler}>
           Save
         </button>
