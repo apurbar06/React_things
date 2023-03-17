@@ -1,7 +1,13 @@
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [mobileNumber, setMobileNumber] = useState("");
+  const [message, setMessage] = useState("");
+
   return (
     <div className="App">
       <header className="App-header">
