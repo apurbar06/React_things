@@ -23,6 +23,7 @@ function App() {
       if (res.status === 200) {
         setName("");
         setEmail("");
+        setMobileNumber("");
         setMessage("User created successfully");
       } else {
         setMessage("Some error occured");
