@@ -5,6 +5,15 @@ class App extends Component {
     contacts: []
   }
 
+  componentDidMount() {
+    fetch('http://jsonplaceholder.typicode.com/users')
+    .then(response => response.json())
+    .then((data) => {
+      this.setState({ contacts:data})
+    })
+    .catch(console.log)
+  }
+
   render() {
     return (
       <div class="card">
